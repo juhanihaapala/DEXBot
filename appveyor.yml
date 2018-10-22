@@ -20,8 +20,6 @@ install:
   - copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
   - copy c:\Python35-x64\python.exe c:\Python35-x64\python3.exe
   - python -m pip install --upgrade pip
-  - appveyor DownloadFile -filename vcredist2010_x64.exe https://www.microsoft.com/en-us/download/details.aspx?id=13523
-  - vcredist2010_x64.exe /passive /norestart
   - appveyor DownloadFile -filename vcredist2017_x64.exe https://social.msdn.microsoft.com/Forums/vstudio/en-US/e653a57a-bc32-4134-87bf-df33058f0531/download-microsoft-visual-c-2017-redistributable?forum=vssetup
   - vcredist2017_x64.exe /passive /norestart
   - python --version
