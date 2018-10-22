@@ -19,6 +19,11 @@ install:
   - SET PATH=%PYTHON%;%PYTHON%\\Scripts;%PATH%;C:\MinGW\bin;C:\Python35-x64\Scripts
   - copy c:\MinGW\bin\mingw32-make.exe c:\MinGW\bin\make.exe
   - copy c:\Python35-x64\python.exe c:\Python35-x64\python3.exe
+  - python -m pip install --upgrade pip
+  - appveyor DownloadFile -filename vcredist_x86.exe https://www.microsoft.com/en-us/download/details.aspx?id=8328
+  - vcredist_x86.exe /passive /norestart
+  - appveyor DownloadFile -filename vcredist_x64.exe https://www.microsoft.com/en-us/download/details.aspx?id=13523
+  - vcredist_x64.exe /passive /norestart
   - python --version
   - make install
 
