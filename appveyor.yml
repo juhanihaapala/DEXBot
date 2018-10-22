@@ -21,7 +21,7 @@ install:
   - copy c:\Python35-x64\python.exe c:\Python35-x64\python3.exe
   - python -m pip install --upgrade pip
   - appveyor DownloadFile -filename vcredist2010_x64.exe https://download.microsoft.com/download/A/8/0/A80747C3-41BD-45DF-B505-E9710D2744E0/vcredist_x64.exe
-  - vcredist2010_x86.exe /passive /norestart
+  - vcredist2010_x64.exe /passive /norestart
   - appveyor DownloadFile -filename vcredist2017_x64.exe https://aka.ms/vs/15/release/VC_redist.x64.exe
   - vcredist2017_x64.exe /passive /norestart
   - python --version
