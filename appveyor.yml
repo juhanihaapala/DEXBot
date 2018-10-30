@@ -28,7 +28,7 @@ install:
   - vcredist2017_x64.exe /passive /norestart
   - python --version
   - pip3 install sqlalchemy
-  - '7z e c:\python35-x64\lib\site-packages\sqlalchemy-1.2.12-py3.5-win-amd64.egg c:\python35-x64\lib\site-packages\sqlalchemy-1.2.12-py3.5-win-amd64.egg'
+#  - '7z e c:\python35-x64\lib\site-packages\sqlalchemy-1.2.12-py3.5-win-amd64.egg c:\python35-x64\lib\site-packages\sqlalchemy-1.2.12-py3.5-win-amd64.egg'
   - make install
 
 after_test:
